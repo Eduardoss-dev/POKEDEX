@@ -32,7 +32,7 @@ def buscar_pokemon():
             text=f"Altura: {dados['height']}   Peso: {dados['weight']}"
         )
 
-        # GIF animado
+
         gif_url = dados["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"]
 
         if not gif_url:
@@ -54,36 +54,36 @@ def buscar_pokemon():
         info_label.config(text="")
         label_imagem.config(image="")
 
-# 🎨 Interface estilo Pokédex
+
 janela = tk.Tk()
 janela.title("Pokédex")
 janela.geometry("350x500")
 janela.configure(bg="#cc0000")  # vermelho pokedex
 
-# Tela (parte branca)
+
 tela = tk.Frame(janela, bg="black", bd=5)
 tela.place(x=30, y=80, width=290, height=250)
 
 label_imagem = tk.Label(tela, bg="black")
 label_imagem.pack(expand=True)
 
-# Nome
+
 nome_label = tk.Label(janela, text="", font=("Arial", 16, "bold"), bg="#cc0000", fg="white")
 nome_label.place(x=30, y=340)
 
-# Tipo
+
 tipo_label = tk.Label(janela, text="", font=("Arial", 10), bg="#cc0000", fg="white")
 tipo_label.place(x=30, y=370)
 
-# Info
+
 info_label = tk.Label(janela, text="", font=("Arial", 10), bg="#cc0000", fg="white")
 info_label.place(x=30, y=400)
 
-# Entrada
+
 entrada = tk.Entry(janela, font=("Arial", 12))
 entrada.place(x=30, y=30, width=200)
 
-# Botão
+
 botao = tk.Button(
     janela,
     text="Buscar",
@@ -93,7 +93,7 @@ botao = tk.Button(
 )
 botao.place(x=240, y=28)
 
-# Botões decorativos estilo pokedex
+
 tk.Canvas(janela, width=20, height=20, bg="blue", highlightthickness=0).place(x=30, y=450)
 tk.Canvas(janela, width=20, height=20, bg="yellow", highlightthickness=0).place(x=60, y=450)
 tk.Canvas(janela, width=20, height=20, bg="green", highlightthickness=0).place(x=90, y=450)
